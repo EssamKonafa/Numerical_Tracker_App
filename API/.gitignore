@@ -1,0 +1,14 @@
+# Ignore Python bytecode files
+*.pyc
+
+# Ignore the __pycache__ directory
+__pycache__/
+
+# Ignore Flask environment folders
+venv/
+.venv/
+env/
+
+# Ignore generated files
+*.db
+*.log
