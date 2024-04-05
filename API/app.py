@@ -29,13 +29,6 @@ def signup():
     connection = sqlite3.connect('database.db')
     theCursor = connection.cursor()
 
-    # theCursor.execute('SELECT id FROM users WHERE username=?',(username,))
-    # exitingUser = theCursor.fetchone()
-
-    # if exitingUser:
-    #     connection.close()
-    #     return jsonify({'success':False,'message':'username already exist try another one instead'})
-
     try:
         theCursor.execute('INSERT INTO users (username,password) VALUES (?,?)',(username,password))
         connection.commit()

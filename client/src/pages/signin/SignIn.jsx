@@ -13,7 +13,9 @@ function Signin() {
     try {
       const response = await axios.post('http://localhost:5000/signin', { username, password })
       console.log(response.data);
-      navigate('/table')
+      if(response.data.success){
+        navigate('/table')
+      }
     } catch (err) {
       console.error(err);
     }
